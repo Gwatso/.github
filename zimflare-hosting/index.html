@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fast, secure, and affordable web hosting built for Zimbabwe. Register domains, host WordPress, and get email hosting with local support.">
+    <meta name="keywords" content="web hosting Zimbabwe, .co.zw domain, WordPress hosting, email hosting, affordable hosting">
+    <meta name="author" content="Zimflare Hosting">
+    <meta name="theme-color" content="#1a3a4a">
+    
+    <title>Zimflare Hosting - Premium Web Hosting for Zimbabwe</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ========================================
+     HEADER & NAVIGATION
+     ======================================== -->
+
+<header>
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="logo">
+                ⚡ Zimflare Hosting
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#hosting">Hosting</a></li>
+                    <li><a href="#domains">Domains</a></li>
+                    <li><a href="#wordpress">WordPress</a></li>
+                    <li><a href="#email">Email</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact" class="btn btn-primary btn-sm">Get Started</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ========================================
+     HERO SECTION
+     ======================================== -->
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Fast, Secure Web Hosting Built for Zimbabwe</h1>
+            <p>Launch your website, register your domain, and grow online with reliable hosting designed for Zimbabwean businesses, startups, and individuals.</p>
+            
+            <div class="hero-cta">
+                <button class="btn btn-white btn-lg" onclick="scrollTo('#hosting')">Explore Plans</button>
+                <button class="btn btn-secondary btn-lg" onclick="scrollTo('#domains')">Search Domain</button>
+            </div>
+
+            <div class="domain-search">
+                <input type="text" id="domainSearch" placeholder="Enter your domain name" onkeypress="if(event.key==='Enter') searchDomain()">
+                <select id="domainExtension">
+                    <option value=".co.zw">.co.zw</option>
+                    <option value=".com">.com</option>
+                    <option value=".org.zw">.org.zw</option>
+                    <option value=".net">.net</option>
+                    <option value=".africa">.africa</option>
+                    <option value=".online">.online</option>
+                </select>
+                <button onclick="searchDomain()">Search</button>
+            </div>
+            <div id="searchResults"></div>
+
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>Free SSL Certificates</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"/>
+                    </svg>
+                    <span>99.9% Uptime</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 2.97c-2.52-1.29-4.92-3.7-6.22-6.22l2.97-1.57c.27-.27.36-.66.24-1.01-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                    </svg>
+                    <span>WhatsApp Support</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-2.12-2.59c-.18-.22-.49-.28-.75-.14-.27.14-.43.42-.35.71l1.83 4.5c.12.32.43.52.77.52s.65-.2.77-.52l4.33-5.58c.14-.27.07-.57-.17-.72-.28-.16-.58-.06-.76.28z"/>
+                    </svg>
+                    <span>Daily Backups</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 8h-1V6c0-.82-.68-1.5-1.5-1.5S14 5.18 14 6v2h-4V6c0-.82-.68-1.5-1.5-1.5S7 5.18 7 6v2H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 14H6V10h12v12z"/>
+                    </svg>
+                    <span>.co.zw Support</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>WordPress Ready</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     TRUST/FEATURE BAR
+     ======================================== -->
+
+<section class="trust-bar">
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                </svg>
+                <h4>Fast SSD Hosting</h4>
+                <p>Lightning-fast NVMe storage for your websites</p>
+            </div>
+            <div class="trust-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <h4>Security First</h4>
+                <p>SSL, malware protection, and daily backups</p>
+            </div>
+            <div class="trust-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <h4>Local Support</h4>
+                <p>Real humans, real support via WhatsApp & email</p>
+            </div>
+            <div class="trust-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <polyline points="12 15 12 3"></polyline>
+                </svg>
+                <h4>Easy Setup</h4>
+                <p>1-click WordPress install, simple dashboard</p>
+            </div>
+            <div class="trust-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20m10-10H2"></path>
+                </svg>
+                <h4>Transparent Pricing</h4>
+                <p>No hidden fees, USD pricing, monthly or annual</p>
+            </div>
+            <div class="trust-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 14c1.49-1.46 3-3.99 3-7a7 7 0 0 0-7-7 7 7 0 0 0-7 7c0 3.01 1.51 5.54 3 7m-3 6h8m-4-3v3m-4-1h12"></path>
+                </svg>
+                <h4>Always Available</h4>
+                <p>Monitored 24/7, uptime you can rely on</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     HOSTING PLANS
+     ======================================== -->
+
+<section class="section section-white" id="hosting">
+    <div class="container">
+        <div class="pricing-header">
+            <h2>Simple, Affordable Hosting Plans</h2>
+            <p>Start small and grow at your own pace. All plans include free SSL, daily backups, and local support.</p>
+            
+            <div class="pricing-toggle">
+                <span>Monthly</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="billingToggle">
+                    <label for="billingToggle"></label>
+                </div>
+                <span>Annual (Save 25%)</span>
+            </div>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Launch Plan -->
+            <div class="plan-card">
+                <h3>Launch Plan</h3>
+                <p class="plan-description">Perfect for individuals and first-time website owners</p>
+                <div class="plan-price">
+                    <span class="price-monthly">$3.99</span>
+                    <span class="price-annual" style="display:none;">$35.88</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>1 Website</li>
+                    <li>10GB SSD Storage</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>5 Email Accounts</li>
+                    <li>Free SSL Certificate</li>
+                    <li>Daily Backups</li>
+                    <li>Email & Chat Support</li>
+                </ul>
+                <button class="btn btn-primary" onclick="selectPlan('Launch')">Choose Plan</button>
+            </div>
+
+            <!-- Grow Plan (Featured) -->
+            <div class="plan-card featured">
+                <div class="plan-badge">Most Popular</div>
+                <h3>Grow Plan</h3>
+                <p class="plan-description">Ideal for small businesses and growing websites</p>
+                <div class="plan-price">
+                    <span class="price-monthly">$6.99</span>
+                    <span class="price-annual" style="display:none;">$62.91</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>Unlimited Websites</li>
+                    <li>50GB SSD Storage</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>Unlimited Email Accounts</li>
+                    <li>Free SSL Certificate</li>
+                    <li>Daily Backups</li>
+                    <li>Priority Email & WhatsApp Support</li>
+                    <li>1-Click WordPress Install</li>
+                </ul>
+                <button class="btn btn-primary" onclick="selectPlan('Grow')">Choose Plan</button>
+            </div>
+
+            <!-- Scale Plan -->
+            <div class="plan-card">
+                <h3>Scale Plan</h3>
+                <p class="plan-description">For agencies and high-traffic websites</p>
+                <div class="plan-price">
+                    <span class="price-monthly">$12.99</span>
+                    <span class="price-annual" style="display:none;">$116.91</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>Unlimited Websites</li>
+                    <li>200GB SSD Storage</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>Unlimited Email Accounts</li>
+                    <li>Free SSL Certificate</li>
+                    <li>Hourly Backups</li>
+                    <li>24/7 Priority Support</li>
+                    <li>1-Click WordPress Install</li>
+                    <li>Website Migration</li>
+                </ul>
+                <button class="btn btn-primary" onclick="selectPlan('Scale')">Choose Plan</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     WORDPRESS HOSTING
+     ======================================== -->
+
+<section class="section section-light" id="wordpress">
+    <div class="container">
+        <h2 class="text-center mb-lg">WordPress Hosting That Works</h2>
+        <p class="text-center" style="max-width: 600px; margin: 0 auto var(--spacing-xl);">
+            Built for WordPress. Optimized for speed. Managed by us so you can focus on your business.
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>1-Click Installation</h3>
+                <p>Install WordPress in seconds without any technical knowledge required.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>LiteSpeed Caching</h3>
+                <p>Lightning-fast page loads with advanced caching technology included.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Free SSL & Security</h3>
+                <p>Free SSL certificates and automatic security updates for your WordPress site.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Daily Backups</h3>
+                <p>Automatic daily backups so you never lose your important content.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Easy Migration</h3>
+                <p>Migrate from another host for free. We handle everything for you.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🆘</div>
+                <h3>Expert Support</h3>
+                <p>WordPress experts available via WhatsApp and email to help you out.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     DOMAIN REGISTRATION
+     ======================================== -->
+
+<section class="section section-white" id="domains">
+    <div class="container">
+        <h2 class="text-center mb-lg">Find Your Perfect Zimbabwe Domain</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto var(--spacing-xl);">
+            Register your .co.zw domain, .org.zw for non-profits, or go global with .com, .africa, and more.
+        </p>
+
+        <div style="max-width: 600px; margin: var(--spacing-xl) auto; text-align: center;">
+            <div class="features-grid">
+                <div class="why-card">
+                    <h4>.co.zw</h4>
+                    <p>Commercial domains for businesses and professionals in Zimbabwe.</p>
+                    <p style="font-weight: 600; color: var(--primary-blue);">$12.99/year</p>
+                </div>
+                <div class="why-card">
+                    <h4>.org.zw</h4>
+                    <p>Perfect for non-profits, NGOs, churches, and community organizations.</p>
+                    <p style="font-weight: 600; color: var(--primary-blue);">$12.99/year</p>
+                </div>
+                <div class="why-card">
+                    <h4>.ac.zw</h4>
+                    <p>Academic domains for schools, colleges, and universities.</p>
+                    <p style="font-weight: 600; color: var(--primary-blue);">$12.99/year</p>
+                </div>
+                <div class="why-card">
+                    <h4>.com</h4>
+                    <p>The most popular domain extension globally. Perfect for international reach.</p>
+                    <p style="font-weight: 600; color: var(--primary-blue);">$9.99/year</p>
+                </div>
+                <div class="why-card">
+                    <h4>.africa</h4>
+                    <p>Show your African pride. Perfect for continental businesses.</p>
+                    <p style="font-weight: 600; color: var(--primary-blue);">$15.99/year</p>
+                </div>
+                <div class="why-card">
+                    <h4>.online</h4>
+                    <p>Modern, memorable domain perfect for any online business.</p>
+                    <p style="font-weight: 600; color: var(--primary-blue);">$8.99/year</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <button class="btn btn-primary btn-lg" onclick="scrollTo('#home')">Search Your Domain</button>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     EMAIL HOSTING
+     ======================================== -->
+
+<section class="section section-light" id="email">
+    <div class="container">
+        <h2 class="text-center mb-lg">Professional Email Hosting</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto var(--spacing-xl);">
+            Get professional branded email with your own domain. Create multiple email accounts and manage them all from one dashboard.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl);">
+            <div class="feature-card">
+                <div class="feature-icon">📧</div>
+                <h3>Branded Email</h3>
+                <p>Use your own domain for professional email addresses.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Access</h3>
+                <p>Check email on any device with Webmail and smartphone apps.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3>Spam Protection</h3>
+                <p>Advanced spam filters keep unwanted emails out of your inbox.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Unlimited Storage</h3>
+                <p>Never delete emails again. Store everything securely.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Multiple Accounts</h3>
+                <p>Create as many email addresses as your business needs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Email Forwarding</h3>
+                <p>Forward emails from one address to another automatically.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     WHY CHOOSE ZIMFLARE
+     ======================================== -->
+
+<section class="section section-white">
+    <div class="container">
+        <h2 class="text-center mb-lg">Why Choose Zimflare Hosting?</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+            <div class="why-card">
+                <h3>🇿🇼 Built for Zimbabwean Businesses</h3>
+                <p>We understand Zimbabwean customers. USD pricing, local payment methods, and WhatsApp support that speaks your language.</p>
+            </div>
+            <div class="why-card">
+                <h3>🎯 Simple Setup for Beginners</h3>
+                <p>No technical knowledge needed. 1-click WordPress install, easy domain search, and intuitive dashboard.</p>
+            </div>
+            <div class="why-card">
+                <h3>⚡ Fast Loading Websites</h3>
+                <p>SSD storage, LiteSpeed caching, and global CDN mean your website loads lightning-fast for your visitors.</p>
+            </div>
+            <div class="why-card">
+                <h3>🔒 Secure Hosting Environment</h3>
+                <p>Free SSL certificates, malware protection, daily backups, and 24/7 monitoring keep your site safe.</p>
+            </div>
+            <div class="why-card">
+                <h3>💰 Transparent Pricing</h3>
+                <p>No hidden fees. USD pricing that's affordable. Monthly or annual billing. Exactly what you see is what you pay.</p>
+            </div>
+            <div class="why-card">
+                <h3>👥 Human Support</h3>
+                <p>Real people, not bots. Email, WhatsApp, and chat support from team members who actually care about your success.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     LIMITED LAUNCH OFFER
+     ======================================== -->
+
+<section class="section section-dark">
+    <div class="container">
+        <div style="text-align: center; padding: var(--spacing-2xl);">
+            <h2 style="color: var(--accent-orange); margin-bottom: var(--spacing-md);">🎁 Limited Launch Offer</h2>
+            <h3 style="color: var(--bg-white); margin-bottom: var(--spacing-md);">Get a Free Professional Website Design</h3>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; margin-bottom: var(--spacing-lg);">
+                Purchase an annual hosting plan and receive a professionally designed starter website to help your business go online faster.
+            </p>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem;">
+                ⏳ Limited slots available • 📱 Fully responsive design • 🔄 Hosting required • ✅ Free migration from other hosts
+            </p>
+            <button class="btn btn-secondary btn-lg" style="margin-top: var(--spacing-lg);" onclick="scrollTo('#hosting')">
+                Claim Your Free Website
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     TARGET AUDIENCE
+     ======================================== -->
+
+<section class="section section-light">
+    <div class="container">
+        <h2 class="text-center mb-lg">Who We Help</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--spacing-lg);">
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h4>Startups</h4>
+                <p>Launch your idea online affordably and grow without hosting limits.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h4>Small Businesses</h4>
+                <p>Establish your online presence with professional hosting and email.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h4>Schools</h4>
+                <p>Host educational content and manage student portals with ease.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⛪</div>
+                <h4>Churches</h4>
+                <p>Build community online with affordable .org.zw domains and hosting.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h4>NGOs</h4>
+                <p>Spread your mission online with affordable hosting and support.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍💻</div>
+                <h4>Freelancers</h4>
+                <p>Showcase your portfolio and projects with professional hosting.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛍️</div>
+                <h4>Online Stores</h4>
+                <p>Host your e-commerce site with the speed and security you need.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h4>Diaspora Businesses</h4>
+                <p>Serve Zimbabwe customers with local support and USD pricing.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     TESTIMONIALS
+     ======================================== -->
+
+<section class="section section-white">
+    <div class="container">
+        <h2 class="text-center mb-lg">What Our Customers Say</h2>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Zimflare made it so easy to launch my online store. The support team on WhatsApp helped me at every step. Highly recommended!"</p>
+                <div class="testimonial-author">Tendai Mutandwa</div>
+                <div class="testimonial-role">E-commerce Business Owner, Harare</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"As a non-profit, budget is tight. Zimflare's affordable .org.zw hosting lets us reach more people online without breaking the bank."</p>
+                <div class="testimonial-author">Grace Mhlanga</div>
+                <div class="testimonial-role">NGO Director, Bulawayo</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"My WordPress site loads incredibly fast. The LiteSpeed caching is amazing. Plus, the local support means someone who understands Zimbabwe actually helps."</p>
+                <div class="testimonial-author">David Nyamurera</div>
+                <div class="testimonial-role">Freelance Designer, Mutare</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I migrated from another host and it was painless. The team guided me through everything. Now I have peace of mind with daily backups and 99.9% uptime."</p>
+                <div class="testimonial-author">Solomon Khumalo</div>
+                <div class="testimonial-role">Tech Startup Founder, Harare</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Best decision for my school website. Easy to manage, students love the speed, and the .ac.zw domain makes us look legitimate. Great value for money."</p>
+                <div class="testimonial-author">Mrs. Shamiso Dube</div>
+                <div class="testimonial-role">School Headmistress, Gweru</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The free SSL and daily backups give me confidence that my data is safe. WhatsApp support is always there when I need help. Zimflare is the real deal!"</p>
+                <div class="testimonial-author">Patience Madzingo</div>
+                <div class="testimonial-role">Church Administrator, Chitungwiza</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     FAQ SECTION
+     ======================================== -->
+
+<section class="section section-light" id="faq">
+    <div class="container">
+        <h2 class="text-center mb-lg">Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is web hosting?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Web hosting is a service that allows you to publish a website on the internet. When you sign up for hosting, we store your website files on our secure servers so people can visit your site 24/7. Think of it like renting space on the internet for your business.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is a domain name?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        A domain name is your website's address on the internet (like zimflare.co.zw). It's what people type into their browser to visit your site. We help you register your domain and connect it to your hosting account.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I register a .co.zw domain?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! We specialize in .co.zw domains for Zimbabwe-based businesses. We also offer .org.zw for non-profits, .ac.zw for academic institutions, .com, .africa, and many more extensions. Register your domain and start building your online presence today.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do I need a website before buying hosting?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Not at all! Most of our customers start with hosting and build their website after. With our 1-click WordPress install, you can have a website running within minutes. We also offer free website design with annual plans if you need help getting started.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can you help me migrate my website?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Absolutely! If you're currently hosted elsewhere, we offer free migration for Scale Plan customers. Our technical team will handle everything so you don't have to worry about downtime. Just contact us and we'll take care of it.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you support WordPress?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! WordPress is our passion. Our hosting is fully optimized for WordPress with 1-click install, LiteSpeed caching for speed, and automatic updates. We also have WordPress experts available via WhatsApp and email if you need help.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What payment methods do you accept?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        We accept international credit cards, PayPal, and are adding more local Zimbabwe payment methods. Contact us on WhatsApp to discuss payment options that work best for you.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I upgrade my hosting plan anytime?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! You can upgrade or downgrade your plan anytime. If you upgrade, we'll refund the unused portion of your current plan and charge the difference. It's easy and hassle-free.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     FINAL CTA
+     ======================================== -->
+
+<section class="section section-dark" id="contact">
+    <div class="container">
+        <div style="text-align: center;">
+            <h2 style="color: var(--bg-white);">Ready to Take Your Business Online?</h2>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; margin-bottom: var(--spacing-xl);">
+                Start with a domain, hosting, and support built for Zimbabwe's digital future.
+            </p>
+            <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-lg" onclick="scrollTo('#hosting')">Choose a Plan</button>
+                <a href="https://wa.me/263772123456" class="btn btn-white btn-lg">Contact Support</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     FOOTER
+     ======================================== -->
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Zimflare Hosting</h4>
+                <p>Premium web hosting built for Zimbabwe. Fast, secure, affordable.</p>
+                <p style="margin-top: var(--spacing-md);">
+                    <strong>WhatsApp:</strong> <a href="https://wa.me/263772123456">+263 77 212 3456</a><br>
+                    <strong>Email:</strong> <a href="mailto:support@zimflare.co.zw">support@zimflare.co.zw</a>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#hosting">Web Hosting</a></li>
+                    <li><a href="#wordpress">WordPress Hosting</a></li>
+                    <li><a href="#domains">Domain Registration</a></li>
+                    <li><a href="#email">Email Hosting</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#docs">Documentation</a></li>
+                    <li><a href="#status">System Status</a></li>
+                    <li><a href="#help">Help Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zimflare Hosting. All rights reserved. | Built with ❤️ for Zimbabwe</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ========================================
+     WHATSAPP FLOATING BUTTON
+     ======================================== -->
+
+<a href="https://wa.me/263772123456" class="whatsapp-float" title="Chat with us on WhatsApp">
+    💬
+</a>
+
+<!-- ========================================
+     SCRIPTS
+     ======================================== -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
